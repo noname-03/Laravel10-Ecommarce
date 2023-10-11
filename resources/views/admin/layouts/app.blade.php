@@ -33,7 +33,7 @@
 
 
         <!-- ========== Menu ========== -->
-        {{-- @include('admin.layouts.sidebar') --}}
+        @include('admin.layouts.sidebar')
         <!-- ========== Left menu End ========== -->
 
 

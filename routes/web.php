@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\CategoryProductController;
 use App\Http\Controllers\Admin\ProductController;
+use App\Http\Controllers\Guest\GuestController;
 use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
@@ -24,9 +25,8 @@ Route::prefix('/admin')->name('admin.')->middleware(['role:admin', 'auth'])->gro
 Route::name('user.')->middleware(['role:user', 'auth'])->group(
     function () {
         Route::get('/dashboard', [UserController::class, 'index'])->name('dashboard');
+        Route::get('/product/{id}', [UserController::class, 'productshow'])->name('product.show');
     }
 );
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [UserController::class, 'index']);

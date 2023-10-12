@@ -57,13 +57,19 @@
                     <span class="menu-text"> Transaksi </span>
                 </a>
             </li>
-
             <li class="menu-item">
                 <a href="{{ route('user.index') }}" class="menu-link">
                     <span class="menu-icon"><i data-feather="user"></i></span>
                     <span class="menu-text"> User </span>
                 </a>
             </li> --}}
+
+            <li class="menu-item">
+                <a href="{{ route('admin.user.index') }}" class="menu-link">
+                    <span class="menu-icon"><i data-feather="user"></i></span>
+                    <span class="menu-text"> User </span>
+                </a>
+            </li>
 
         </ul>
         <!--- End Menu -->

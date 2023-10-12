@@ -4,6 +4,7 @@ use App\Http\Controllers\Admin\CategoryProductController as AdminCategoryProduct
 use App\Http\Controllers\User\CategoryProductController as UserCategoryProductController;
 use App\Http\Controllers\Admin\ProductController as AdminProductController;
 use App\Http\Controllers\User\ProductController as UserProductController;
+use App\Http\Controllers\Admin\UserController as AdminUserController;
 use App\Http\Controllers\Guest\GuestController;
 use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Route;
@@ -17,6 +18,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::prefix('/admin')->name('admin.')->middleware(['role:admin', 'auth'])->group(
     function () {
         Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard');
+        Route::resource('/user', AdminUserController::class);
         Route::resource('/categoryProduct', AdminCategoryProductController::class);
         Route::resource('/product', AdminProductController::class);
 

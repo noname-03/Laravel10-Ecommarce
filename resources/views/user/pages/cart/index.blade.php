@@ -90,10 +90,10 @@
                     {{-- <button class="btn btn-default" type="submit">Continue shopping <i class="fa fa-shopping-cart"></i></button> --}}
                     <a href="/" class="btn btn-default" rel="noopener noreferrer">Continue
                         shopping <i class="fa fa-shopping-cart"></i></a>
-                    <a class="btn btn-primary" href="#"
+                    <a class="btn btn-primary" href="{{ route('user.transaction.store') }}"
                         onclick="event.preventDefault(); document.getElementById('transaction.store').submit();">Checkout <i
                             class="fa fa-check"></i></a>
-                    <form id="transaction.store" action="#" method="POST">
+                    <form id="transaction.store" action="{{ route('user.transaction.store') }}" method="POST">
                         @csrf
                         <input type="hidden" name="total" value="{{ $sub + 15000 }}">
                     </form>

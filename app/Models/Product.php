@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Models\CategoryProduct;
 use App\Models\Cart;
+use App\Models\DetailTransaction;
 
 class Product extends Model
 {
@@ -34,6 +35,11 @@ class Product extends Model
     public function carts()
     {
         return $this->hasMany(Cart::class);
+    }
+
+    public function detailTransactions()
+    {
+        return $this->hasMany(DetailTransaction::class);
     }
 
 }

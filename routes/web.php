@@ -6,6 +6,8 @@ use App\Http\Controllers\User\CategoryProductController as UserCategoryProductCo
 use App\Http\Controllers\Admin\ProductController as AdminProductController;
 use App\Http\Controllers\User\ProductController as UserProductController;
 use App\Http\Controllers\Admin\UserController as AdminUserController;
+use App\Http\Controllers\User\TransactionController as UserTransactionController;
+use App\Http\Controllers\Admin\TransactionController as AdminTransactionController;
 use App\Http\Controllers\Guest\GuestController;
 use App\Http\Controllers\User\UserController;
 use Illuminate\Support\Facades\Route;
@@ -19,6 +21,7 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::prefix('/admin')->name('admin.')->middleware(['role:admin', 'auth'])->group(
     function () {
         Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard');
+        Route::resource('/transaction', AdminTransactionController::class);
         Route::resource('/user', AdminUserController::class);
         Route::resource('/categoryProduct', AdminCategoryProductController::class);
         Route::resource('/product', AdminProductController::class);
@@ -31,6 +34,8 @@ Route::name('user.')->middleware(['role:user', 'auth'])->group(
     function () {
         Route::get('/dashboard', [UserController::class, 'index'])->name('dashboard');
         Route::resource('/cart', CartController::class);
+        Route::post('/transaction/store', [UserTransactionController::class, 'store'])->name('transaction.store');
+        Route::get('/transaction/{id}', [UserTransactionController::class, 'show'])->name('transaction.show');
     }
 );
 

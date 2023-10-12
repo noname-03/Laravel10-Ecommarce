@@ -45,25 +45,12 @@
                     <span class="menu-text"> Produk </span>
                 </a>
             </li>
-            {{-- <li class="menu-item">
-                <a href="{{ route('Product.index') }}" class="menu-link">
-                    <span class="menu-icon"><i data-feather="shopping-cart"></i></span>
-                    <span class="menu-text"> Produk </span>
-                </a>
-            </li>
             <li class="menu-item">
-                <a href="{{ route('transaction.index') }}" class="menu-link">
+                <a href="{{ route('admin.transaction.index') }}" class="menu-link">
                     <span class="menu-icon"><i data-feather="dollar-sign"></i></span>
                     <span class="menu-text"> Transaksi </span>
                 </a>
             </li>
-            <li class="menu-item">
-                <a href="{{ route('user.index') }}" class="menu-link">
-                    <span class="menu-icon"><i data-feather="user"></i></span>
-                    <span class="menu-text"> User </span>
-                </a>
-            </li> --}}
-
             <li class="menu-item">
                 <a href="{{ route('admin.user.index') }}" class="menu-link">
                     <span class="menu-icon"><i data-feather="user"></i></span>

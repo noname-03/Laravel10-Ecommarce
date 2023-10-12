@@ -39,6 +39,12 @@
                     <span class="menu-text"> Kategori </span>
                 </a>
             </li>
+            <li class="menu-item">
+                <a href="{{ route('admin.product.index') }}" class="menu-link">
+                    <span class="menu-icon"><i data-feather="shopping-cart"></i></span>
+                    <span class="menu-text"> Produk </span>
+                </a>
+            </li>
             {{-- <li class="menu-item">
                 <a href="{{ route('Product.index') }}" class="menu-link">
                     <span class="menu-icon"><i data-feather="shopping-cart"></i></span>

@@ -14,6 +14,10 @@ class CategoryProductSeeder extends Seeder
     public function run(): void
     {
         CategoryProduct::create([
+            'name' => 'Makanan'
+        ]);
+
+        CategoryProduct::create([
             'name' => 'Pakaian'
         ]);
 

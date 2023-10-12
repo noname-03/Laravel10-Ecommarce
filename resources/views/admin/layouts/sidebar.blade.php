@@ -4,13 +4,13 @@
     <div class="logo-box">
         <!-- Brand Logo Light -->
         <a href="{{ route('home') }}" class="logo-light">
-            <img src="{{ asset('admin') }}/assets/images/logoMall.png" alt="logo" width="100">
+            <img src="{{ asset('user') }}/assets/corporate/img/logos/logo-shop-red.png" alt="logo" width="100">
             {{-- <img src="assets/images/logo-sm.png" alt="small logo" class="logo-sm"> --}}
         </a>
 
         <!-- Brand Logo Dark -->
         <a href="{{ route('home') }}" class="logo-dark">
-            <img src="{{ asset('admin') }}/assets/images/logoMall.png" alt="logo" width="100">
+            <img src="{{ asset('user') }}/assets/corporate/img/logos/logo-shop-red.png" alt="logo" width="100">
             {{-- <img src="assets/images/logo-sm.png" alt="small logo" class="logo-sm"> --}}
         </a>
     </div>

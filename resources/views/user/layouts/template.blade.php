@@ -182,12 +182,12 @@ Purchase Premium Metronic Admin Theme: http://themeforest.net/item/metronic-resp
             <div class="row">
                 <!-- BEGIN COPYRIGHT -->
                 <div class="col-md-4 col-sm-4 padding-top-10">
-                    2015 © Keenthemes. ALL Rights Reserved.
+                    2023 © ShopNow. ALL Rights Reserved.
                 </div>
                 <!-- END COPYRIGHT -->
                 <!-- BEGIN POWERED -->
                 <div class="col-md-4 col-sm-4 text-right">
-                    <p class="powered">Powered by: <a href="http://www.keenthemes.com/">KeenThemes.com</a></p>
+                    {{-- <p class="powered">Powered by: <a href="http://www.keenthemes.com/">KeenThemes.com</a></p> --}}
                 </div>
                 <!-- END POWERED -->
             </div>

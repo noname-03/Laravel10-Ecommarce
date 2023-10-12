@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>PAK | Register </title>
+    <title>Shop Now | Register </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
     <meta content="Coderthemes" name="author" />
@@ -39,13 +39,13 @@
                                 <div class="auth-brand">
                                     <a href="/" class="logo logo-dark text-center">
                                         <span class="logo-lg">
-                                            <h2>E-Commarce</h2>
+                                            <h2>Shop Now</h2>
                                         </span>
                                     </a>
 
                                     <a href="/" class="logo logo-light text-center">
                                         <span class="logo-lg">
-                                            <h2>E-Commarce</h2>
+                                            <h2>Shop Now</h2>
                                         </span>
                                     </a>
                                 </div>

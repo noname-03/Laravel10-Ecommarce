@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>MALL UKM || @yield('title')</title>
+    <title>Shop Now || @yield('title')</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
     <meta content="Coderthemes" name="author" />
@@ -66,7 +66,7 @@
                             <div>
                                 <script>
                                     document.write(new Date().getFullYear())
-                                </script> © MALL UKM
+                                </script> © Shop Now
                             </div>
                         </div>
                     </div>

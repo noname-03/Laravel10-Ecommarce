@@ -39,24 +39,6 @@
                                     <h3><a href="{{ route('product.show', $data->id) }}">{{ $data->title }}</a>
                                     </h3>
                                     <div class="pi-price">@currency($data->price)</div>
-                                    <form action="#" method="POST" id="demo-form2" data-parsley-validate
-                                        class="form-horizontal form-label-left" enctype="multipart/form-data">
-                                        @csrf
-                                        {{-- <input type="hidden" name="user_id" value="{{ Auth::user()->id }}"> --}}
-                                        <input type="hidden" name="product_id" value="{{ $data->id }}">
-                                        <input type="hidden" name="qty" value="1">
-                                        <input type="hidden" name="subtotal" value="{{ $data->price }}">
-                                        <button href="#" class="btn btn-default add2cart">Add to
-                                            cart</button>
-                                    </form>
-                                    {{-- <a href="#" class="btn btn-default add2cart" onclick="event.preventDefault(); document.getElementById('add-cart').submit();">Add to cart</a> --}}
-                                    {{-- <form id="add-cart" action="#" method="POST" class="d-none">
-                    @csrf
-                    <input type="hidden" name="user_id" value="{{ Auth::user()->id }}">
-                    <input type="hidden" name="product_id" value="{{$data->id}}">
-                    <input type="hidden" name="qty" value="1">
-                    <input type="hidden" name="subtotal" value="{{$data->price}}">
-                </form> --}}
                                     <div class="sticker sticker-new"></div>
                                 </div>
                             </div>

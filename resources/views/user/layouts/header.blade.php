@@ -18,13 +18,13 @@
                     <!-- BEGIN DROPDOWN MENU -->
                     <ul class="dropdown-menu">
                         @foreach ($categories as $data)
-                            <li><a href="#">{{ $data->name }}</a>
+                            <li><a href="{{ route('category.show', $data->id) }}">{{ $data->name }}</a>
                             </li>
                         @endforeach
                     </ul>
                     <!-- END DROPDOWN MENU -->
                 </li>
-                <li><a href="#">Keranjang</a></li>
+                <li><a href="{{ route('user.cart.index') }}">Keranjang</a></li>
             </ul>
         </div>
         <!-- END NAVIGATION -->

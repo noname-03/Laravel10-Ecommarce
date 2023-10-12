@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Models\CategoryProduct;
+use App\Models\Cart;
 
 class Product extends Model
 {
@@ -28,6 +29,11 @@ class Product extends Model
     public function categoryProduct()
     {
         return $this->belongsTo(CategoryProduct::class, 'category_id', 'id');
+    }
+
+    public function carts()
+    {
+        return $this->hasMany(Cart::class);
     }
 
 }

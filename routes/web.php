@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\CategoryProductController as AdminCategoryProductController;
+use App\Http\Controllers\User\CartController;
 use App\Http\Controllers\User\CategoryProductController as UserCategoryProductController;
 use App\Http\Controllers\Admin\ProductController as AdminProductController;
 use App\Http\Controllers\User\ProductController as UserProductController;
@@ -29,6 +30,7 @@ Route::prefix('/admin')->name('admin.')->middleware(['role:admin', 'auth'])->gro
 Route::name('user.')->middleware(['role:user', 'auth'])->group(
     function () {
         Route::get('/dashboard', [UserController::class, 'index'])->name('dashboard');
+        Route::resource('/cart', CartController::class);
     }
 );
 

@@ -21,6 +21,6 @@ class ProductController extends Controller
             $product->photo = $photos[0];
             return $product;
         });
-        return view('user.pages.item', compact('id', 'categories', 'products'));
+        return view('user.pages.product.item', compact('id', 'categories', 'products'));
     }
 }

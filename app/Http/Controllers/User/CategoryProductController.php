@@ -31,7 +31,7 @@ class CategoryProductController extends Controller
         $category->load('products');
 
         // Pass data to the view
-        return view('user.pages.productCategory', compact('categories', 'category', 'products'));
+        return view('user.pages.product.productCategory', compact('categories', 'category', 'products'));
     }
 
 }

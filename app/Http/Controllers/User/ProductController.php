@@ -4,14 +4,16 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use App\Models\CategoryProduct;
-use App\Models\Product;
 use Illuminate\Http\Request;
+use App\Models\Product;
 
-class UserController extends Controller
+class ProductController extends Controller
 {
 
-    public function index()
+    public function show($id)
     {
+        $id = Product::findOrFail($id);
+        $id->photo = explode(',', $id->photo);
         $categories = CategoryProduct::all();
         $products = Product::paginate(6);
         $products->getCollection()->transform(function ($product) {
@@ -19,6 +21,6 @@ class UserController extends Controller
             $product->photo = $photos[0];
             return $product;
         });
-        return view('user.home', compact('products', 'categories'));
+        return view('user.pages.item', compact('id', 'categories', 'products'));
     }
 }

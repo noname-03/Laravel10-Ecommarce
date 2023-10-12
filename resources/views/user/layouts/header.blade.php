@@ -8,10 +8,10 @@
         <!-- BEGIN NAVIGATION -->
         <div class="header-navigation">
             <ul>
-                <li><a href="/">Home</a></li>
+                <li><a href="/">Beranda</a></li>
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="javascript:;">
-                        Category
+                        Kategori
 
                     </a>
 
@@ -24,7 +24,7 @@
                     </ul>
                     <!-- END DROPDOWN MENU -->
                 </li>
-                <li><a href="#">Cart</a></li>
+                <li><a href="#">Keranjang</a></li>
             </ul>
         </div>
         <!-- END NAVIGATION -->

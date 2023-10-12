@@ -19,7 +19,8 @@
     <div class="main">
         <div class="container">
             <ul class="breadcrumb">
-                <li><a href="/">Home</a></li>
+                <li><a href="/">Beranda</a></li>
+                <li><a href="#">Produk</a></li>
                 <li class="active">{{ $id->title }}</li>
             </ul>
             <!-- BEGIN SIDEBAR & CONTENT -->
@@ -79,7 +80,7 @@
             <div class="product-page-content">
                 <ul id="myTab" class="nav nav-tabs">
                     <li class="active"><a href="#Description" data-toggle="tab">Description</a></li>
-                    <li><a href="#Information" data-toggle="tab">Information</a></li>
+                    {{-- <li><a href="#Information" data-toggle="tab">Information</a></li> --}}
                     {{-- <li><a href="#Reviews" data-toggle="tab">Reviews (2)</a></li> --}}
                 </ul>
                 <div id="myTabContent" class="tab-content">
@@ -89,33 +90,6 @@
                             Jika ingin lebih detail lagi, Anda juga bisa memilih barang dari tiap kategori produk dihalaman
                             utama.
                             Selamat berbelanja.</p>
-                    </div>
-                    <div class="tab-pane fade" id="Information">
-                        <table class="datasheet">
-                            <tr>
-                                <th colspan="2">Additional features</th>
-                            </tr>
-                            <tr>
-                                <td class="datasheet-features-type">Value 1</td>
-                                <td>21 cm</td>
-                            </tr>
-                            <tr>
-                                <td class="datasheet-features-type">Value 2</td>
-                                <td>700 gr.</td>
-                            </tr>
-                            <tr>
-                                <td class="datasheet-features-type">Value 3</td>
-                                <td>10 person</td>
-                            </tr>
-                            <tr>
-                                <td class="datasheet-features-type">Value 4</td>
-                                <td>14 cm</td>
-                            </tr>
-                            <tr>
-                                <td class="datasheet-features-type">Value 5</td>
-                                <td>plastic</td>
-                            </tr>
-                        </table>
                     </div>
                 </div>
             </div>

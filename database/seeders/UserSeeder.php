@@ -6,6 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\User;
 use Illuminate\Support\Str;
+use Spatie\Permission\Models\Role;
 
 class UserSeeder extends Seeder
 {
@@ -14,7 +15,7 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        User::create([
+        $admin = User::create([
             'name' => 'Admin',
             'email' => 'admin@mail.com',
             'email_verified_at' => now(),
@@ -22,7 +23,10 @@ class UserSeeder extends Seeder
             // password
             'remember_token' => Str::random(10),
         ]);
-        User::create([
+        Role::create(['name' => 'admin']);
+        $admin->assignRole('admin');
+
+        $user = User::create([
             'name' => 'user',
             'email' => 'user@mail.com',
             'email_verified_at' => now(),
@@ -30,5 +34,7 @@ class UserSeeder extends Seeder
             // password
             'remember_token' => Str::random(10),
         ]);
+        Role::create(['name' => 'user']);
+        $user->assignRole('user');
     }
 }
